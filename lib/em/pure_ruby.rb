@@ -53,7 +53,7 @@ module EventMachine #:nodoc: all
     # Changed 04Oct06: intervals from the caller are now in milliseconds, but our native-ruby
     # processor still wants them in seconds.
     def add_oneshot_timer interval
-      Reactor.instance.install_oneshot_timer(interval / 1000)
+      Reactor.instance.install_oneshot_timer(interval / 1000.0)
     end
 
     # run_machine
